@@ -6,7 +6,7 @@
 
     <groupId>bora</groupId>
     <artifactId>Oasis</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <packaging>jar</packaging>
 
     <name>Web Automation</name>
@@ -16,26 +16,33 @@
         <browser>Chrome</browser>
         <name>${project.name}</name>
         <cucumber.version>4.8.0</cucumber.version>
-        <web.ui.framework.version>0.7.2</web.ui.framework.version>
-        <mobile.ui.framework.version>0.3.7</mobile.ui.framework.version>
-        <utilities.version>0.7.2</utilities.version>
-        <utility.framework.version>0.0.2</utility.framework.version>
+        <web.ui.framework.version>0.7.3</web.ui.framework.version>
+        <mobile.ui.framework.version>0.4.3</mobile.ui.framework.version>
+        <utilities.version>0.0.3</utilities.version>
+        <api.framework.version>0.0.4</api.framework.version>
         <maven.surefire.version>2.22.1</maven.surefire.version>
+        <buildDirectory>${project.basedir}/out/artifacts/POM-Framework_jar</buildDirectory>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <serenity.maven.version>1.9.12</serenity.maven.version>
+        <maven.surefire.version>2.22.1</maven.surefire.version>
+        <maven.compiler.version>3.8.0</maven.compiler.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
-        <!-- Api Utilities -->
-        <dependency>
-            <groupId>com.github.umutayb</groupId>
-            <artifactId>api-assured</artifactId>
-            <version>${utility.framework.version}</version>
-        </dependency>
-
         <!-- Web UI Framework -->
         <dependency>
             <groupId>com.github.Umutayb</groupId>
             <artifactId>Pickleib</artifactId>
             <version>${web.ui.framework.version}</version>
+        </dependency>
+
+        <!-- Api Utilities -->
+        <dependency>
+            <groupId>com.github.umutayb</groupId>
+            <artifactId>api-assured</artifactId>
+            <version>${api.framework.version}</version>
         </dependency>
 
         <!-- Mobile UI Framework -->
@@ -49,7 +56,7 @@
         <dependency>
             <groupId>com.github.umutayb</groupId>
             <artifactId>java-utilities</artifactId>
-            <version>${utility.framework.version}</version>
+            <version>${utilities.version}</version>
         </dependency>
 
         <!-- Framework as jar
@@ -62,88 +69,6 @@
             <type>jar</type>
         </dependency>
         -->
-
-        <!-- Selenium -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>3.11.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>htmlunit-driver</artifactId>
-            <version>2.20</version>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-api</artifactId>
-            <version>3.141.59</version>
-        </dependency>
-
-        <!-- Appium -->
-        <dependency>
-            <groupId>io.appium</groupId>
-            <artifactId>java-client</artifactId>
-            <version>7.5.1</version>
-        </dependency>
-
-        <!-- JUnit -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- Commons -->
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.11.0</version>
-            <scope>compile</scope>
-        </dependency>
-
-        <!-- REST Assured -->
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>4.4.0</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- Jackson Databind -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.12.4</version>
-        </dependency>
-
-        <!-- HTTP Components -->
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.13</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- Google Simple Json -->
-        <dependency>
-            <groupId>com.googlecode.json-simple</groupId>
-            <artifactId>json-simple</artifactId>
-            <version>1.1.1</version>
-        </dependency>
-
-        <!-- Javax Mail -->
-        <dependency>
-            <groupId>javax.mail</groupId>
-            <artifactId>javax.mail-api</artifactId>
-            <version>1.6.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.sun.mail</groupId>
-            <artifactId>javax.mail</artifactId>
-            <version>1.6.2</version>
-        </dependency>
 
         <!-- Cucumber -->
         <dependency>
@@ -181,6 +106,106 @@
             <version>1.1.14</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>4.8.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Selenium -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>htmlunit-driver</artifactId>
+            <version>2.20</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-api</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+
+        <!-- Appium -->
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>7.3.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Commons -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- REST Assured -->
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>4.3.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Jackson Databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.10.1</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- HTTP Components -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.9</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Wiremock -->
+        <dependency>
+            <groupId>com.github.tomakehurst</groupId>
+            <artifactId>wiremock-jre8</artifactId>
+            <version>2.27.2</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Google Simple Json -->
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Javax Mail -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>javax.mail-api</artifactId>
+            <version>1.6.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.0</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Web Driver Manager -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.0.2</version>
+        </dependency>
 
         <!-- Assert -->
         <dependency>
@@ -196,13 +221,12 @@
             <artifactId>webdriverextensions</artifactId>
             <version>3.11.2</version>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13</version>
-            <scope>compile</scope>
-        </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-loader</artifactId>
+            <version>2.0.1.RELEASE</version>
+        </dependency>
     </dependencies>
 
     <repositories>
@@ -210,86 +234,36 @@
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>central</id>
-            <name>bintray</name>
-            <url>https://jcenter.bintray.com</url>
-        </repository>
     </repositories>
 
     <build>
+
+        <directory>${buildDirectory}</directory>
+
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.7.0</version>
+                <version>${maven.compiler.version}</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <encoding>UTF-8</encoding>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
 
-            <!-- Cucumber JVM Parallel plugin (This generates test suites (.xml files) for each feature file) -->
             <plugin>
-                <groupId>com.github.temyers</groupId>
-                <artifactId>cucumber-jvm-parallel-plugin</artifactId>
-                <version>4.2.0</version>
-                <executions>
-                    <execution>
-                        <id>generateRunners</id>
-                        <phase>generate-test-sources</phase>
-                        <goals>
-                            <goal>generateRunners</goal>
-                        </goals>
-                        <configuration>
-                            <glue>steps</glue>
-                            <featuresDirectory>src/test/java/features</featuresDirectory>
-                            <cucumberOutputDir>target/reports</cucumberOutputDir>
-                            <plugins>
-                                <plugin>
-                                    <name>json</name>
-                                    <extension>json</extension>
-                                    <outputDirectory>${project.build.directory}/reports/json</outputDirectory>
-                                </plugin>
-                                <plugin>
-                                    <name>html</name>
-                                    <extension>html</extension>
-                                    <outputDirectory>${project.build.directory}/reports/html</outputDirectory>
-                                </plugin>
-                                <plugin>
-                                    <name>testng</name>
-                                    <extension>xml</extension>
-                                    <outputDirectory>${project.build.directory}/reports/testng</outputDirectory>
-                                </plugin>
-                            </plugins>
-                            <monochrome>true</monochrome>
-                            <useTestNG>true</useTestNG>
-                            <namingScheme>simple</namingScheme>
-                            <!-- The class naming pattern to use.  Only required/used if naming scheme is 'pattern'.-->
-                            <namingPattern>Parallel{c}IT</namingPattern>
-                            <!-- One of [SCENARIO, FEATURE]. SCENARIO generates one runner per scenario.  FEATURE generates a runner per feature. -->
-                            <parallelScheme>FEATURE</parallelScheme>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <!-- Maven Surefire Plugin (This generates runner classes using the automatically generated test suites [.xml files]) -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven.surefire.version}</version>
+                <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
-                    <parallel>methods</parallel>
-                    <useUnlimitedThreads>true</useUnlimitedThreads>
-                    <forkCount>10</forkCount>
-                    <reuseForks>true</reuseForks>
-                    <includes>
-                        <include>**/Parallel*IT.class</include>
-                    </includes>
+                    <archive>
+                        <manifest>
+                            <mainClass>fully.qualified.MainClass</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
                 </configuration>
             </plugin>
 
