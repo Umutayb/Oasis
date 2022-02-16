@@ -6,7 +6,7 @@
 
     <groupId>bora</groupId>
     <artifactId>Oasis</artifactId>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <packaging>jar</packaging>
 
     <name>Web Automation</name>
@@ -16,7 +16,7 @@
         <browser>Chrome</browser>
         <name>${project.name}</name>
         <cucumber.version>4.8.0</cucumber.version>
-        <web.ui.framework.version>0.7.3</web.ui.framework.version>
+        <web.ui.framework.version>0.7.4</web.ui.framework.version>
         <mobile.ui.framework.version>0.4.3</mobile.ui.framework.version>
         <utilities.version>0.0.3</utilities.version>
         <api.framework.version>0.0.4</api.framework.version>
@@ -58,17 +58,6 @@
             <artifactId>java-utilities</artifactId>
             <version>${utilities.version}</version>
         </dependency>
-
-        <!-- Framework as jar
-        <dependency>
-            <groupId>bora</groupId>
-            <artifactId>POM-Framework-${framework.version}.jar</artifactId>
-            <version>${framework.version}</version>
-            <systemPath>${project.basedir}/lib/POM-FRAMEWORK-${framework.version}.jar</systemPath>
-            <scope>system</scope>
-            <type>jar</type>
-        </dependency>
-        -->
 
         <!-- Cucumber -->
         <dependency>
