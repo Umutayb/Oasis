@@ -1,10 +1,5 @@
 package start;
 
-import utils.Printer;
-
 public class Start {
-    public static void main(String[] args) {
-        Printer log = new Printer(Start.class);
-        log.new Important("Welcome to the Oasis.");
-    }
+    public static void main(String[] args) {System.out.println("\033[1;35mWelcome to the Oasis.\033[0m");}
 }

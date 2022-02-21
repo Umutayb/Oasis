@@ -6,10 +6,10 @@
 
     <groupId>bora</groupId>
     <artifactId>Oasis</artifactId>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
     <packaging>jar</packaging>
 
-    <name>Web Automation</name>
+    <name>Oasis</name>
     <url>https://github.com/Umutayb/Oasis</url>
 
     <properties>
@@ -21,7 +21,7 @@
         <utilities.version>0.0.3</utilities.version>
         <api.framework.version>0.0.4</api.framework.version>
         <maven.surefire.version>2.22.1</maven.surefire.version>
-        <buildDirectory>${project.basedir}/out/artifacts/POM-Framework_jar</buildDirectory>
+        <buildDirectory>${project.basedir}/out/artifacts/OASIS-Framework_jar</buildDirectory>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <serenity.maven.version>1.9.12</serenity.maven.version>
         <maven.surefire.version>2.22.1</maven.surefire.version>
@@ -41,7 +41,7 @@
         <!-- Api Utilities -->
         <dependency>
             <groupId>com.github.umutayb</groupId>
-            <artifactId>api-assured</artifactId>
+            <artifactId>Api-Assured</artifactId>
             <version>${api.framework.version}</version>
         </dependency>
 
@@ -55,7 +55,7 @@
         <!-- Utilities -->
         <dependency>
             <groupId>com.github.umutayb</groupId>
-            <artifactId>java-utilities</artifactId>
+            <artifactId>Java-Utilities</artifactId>
             <version>${utilities.version}</version>
         </dependency>
 
