@@ -19,7 +19,7 @@
         <web.ui.framework.version>0.7.4</web.ui.framework.version>
         <mobile.ui.framework.version>0.4.3</mobile.ui.framework.version>
         <utilities.version>0.0.3</utilities.version>
-        <api.framework.version>0.0.4</api.framework.version>
+        <api.framework.version>0.2.2</api.framework.version>
         <maven.surefire.version>2.22.1</maven.surefire.version>
         <buildDirectory>${project.basedir}/out/artifacts/OASIS-Framework_jar</buildDirectory>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
